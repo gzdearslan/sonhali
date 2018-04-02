@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
-
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
@@ -24,6 +23,7 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { ShoesComponent } from './shoes/shoes.component';
 import { HomeComponent } from './home/home.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 
 
 
@@ -36,7 +36,8 @@ import { HomeComponent } from './home/home.component';
     SignupComponent,
     SigninComponent,
     ShoesComponent,
-    HomeComponent
+    HomeComponent,
+    ResetpasswordComponent
   ],
   imports: [
     BrowserModule,

@@ -2,29 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase';
 import { Router } from '@angular/router';
-
 @Component({
-  selector: 'app-signin',
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css']
+  selector: 'app-resetpassword',
+  templateUrl: './resetpassword.component.html',
+  styleUrls: ['./resetpassword.component.css']
 })
-export class SigninComponent {
+
+export class ResetpasswordComponent {
   errorMessage: string;
 
   constructor(private afAuth: AngularFireAuth, private route: Router) {}
 
-  signin(email: string, password: string) {
+  resetpassword(email: string) {
     this.afAuth.auth
-        .signInWithEmailAndPassword(email, password)
+        .resetpasswordWithEmail(email)
         .then(result => {
-          this.route.navigate(['/home']);
+          this.route.navigate(['/signin']);
         })
         .catch(error => {
           this.errorMessage = error.message;
         });
   }
- 
+
 }
-
-
-
